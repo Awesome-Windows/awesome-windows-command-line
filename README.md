@@ -1,3 +1,5 @@
+# <img src="https://raw.githubusercontent.com/Awesome-Windows/awesome-windows-command-line/master/media/awesome-terminal.gif" width="400" alt="awesome windows">
+
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![ghit.me](https://ghit.me/badge.svg?repo=Awesome-Windows/awesome-windows-command-line)](https://ghit.me/repo/Awesome-Windows/awesome-windows-command-line)
 
 > An awesome & curated list of commands in Windows.
