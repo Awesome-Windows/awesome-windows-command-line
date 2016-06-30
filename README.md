@@ -47,6 +47,21 @@ at 03:30:00PM shutdown -s
 
 OR
 
+schtasks /create /sc once /tn "auto shutdown my computer" /tr "shutdown -s" /st 15:30
+
+* Schedule daily shutdown *
+
+At 11:00:00PM /every:M,T,W,TH,F,SA,SU shutdown -s
+
+* Schedule automatic resart *
+
+at 11:00:00PM shutdown -r
+
+* For Sleep *
+
+sleep number_of_seconds_to_wait; shutdown -r
+
+
 ```
 
 ## System Configuration
