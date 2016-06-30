@@ -17,9 +17,9 @@
     - [Firewall](#firewall)
     - [Time Zone](#time-zone)
     - [Join a Computer to Domain](#join-a-computer-to-domain)
--[user-settings](#user-settings)
-    -[Auto Login](#enabledisable-auto-login)
-    -[Default Printer](#set-default-printer-in-windows7)
+- [user-settings](#user-settings)
+    - [Auto Login](#enabledisable-auto-login)
+    - [Default Printer](#set-default-printer-in-windows7)
 
 ## Appearance
 
