@@ -1,12 +1,13 @@
 # <img src="https://raw.githubusercontent.com/Awesome-Windows/awesome-windows-command-line/master/media/awesome-terminal.gif" alt="awesome windows">
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) [![ghit.me](https://ghit.me/badge.svg?repo=Awesome-Windows/awesome-windows-command-line)](https://ghit.me/repo/Awesome-Windows/awesome-windows-command-line)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
 > An awesome & curated list of commands in Windows.
 
 ## Table of Contents
 
 - [Appearance](#appearance)
+- [Automation](#automation)
     - [Wallpaper](#wallpaper)
 - [System Configuration](#system-configuration)
     - [Hibernation](#hibernation)
@@ -15,6 +16,10 @@
     - [WiFi](#wifi)
     - [Firewall](#firewall)
     - [Time Zone](#time-zone)
+    - [Join a Computer to Domain](#domain)
+-[#user-settings](#user-settings)
+    -[Auto Login](#enabledisable-auto-login)
+    -[Default Printer](#set-default-printer-in-windows7)
 
 ## Appearance
 
@@ -27,6 +32,20 @@ reg add "HKEY_CURRENT_USER\Control Panel\Desktop" /v Wallpaper /t REG_SZ /d  wal
 RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
  
 * Works only for bmp images. If you have .jog or .jpeg images you can’t set them as wallpaper from command line.*
+
+```
+## Automation
+
+### Automatic Shutdown
+
+```
+sleep 9000; shutdown -s
+
+OR
+
+at 03:30:00PM shutdown -s
+
+OR
 
 ```
 
@@ -125,3 +144,40 @@ tzutil /l
 RunDLL32.exe shell32.dll,Control_RunDLL timedate.cpl,,/Z Central Standard Time
 
 ```
+
+### Join a Computer to Domain
+
+```
+netdom.exe join %computername% /domain:DomainName /UserD:DomainName\UserName /PasswordD:Password
+
+* To remove a computer from a Domain *
+
+netdom.exe remove %computername% /domain:Domainname /UserD:DomainName\UserName /PasswordD:Password
+
+```
+Download netdom.exe from [here](http://www.microsoft.com/downloads/details.aspx?FamilyId=49AE8576-9BB9-4126-9761-BA8011FABF38&displaylang=en)
+
+## User Settings
+
+### Enable/Disable Auto Login
+
+Download Autlogin from [here](http://technet.microsoft.com/en-us/sysinternals/bb963905)
+
+```
+Autologon  userName domainName password
+```
+
+### Set default printer in Windows 7
+
+```
+wmic printer get name,default
+
+* Get Default printer *
+
+wmic printer where default='TRUE' get name
+
+* Set Default Printer *
+wmic printer where name='printername' call setdefaultprinter
+
+```
+
