@@ -176,7 +176,7 @@ Download netdom.exe from [here](http://www.microsoft.com/downloads/details.aspx?
 
 ### Enable/Disable Auto Login
 
-Download Autlogin from [here](http://technet.microsoft.com/en-us/sysinternals/bb963905)
+Download Autologin from [here](http://technet.microsoft.com/en-us/sysinternals/bb963905)
 
 ```
 Autologon  userName domainName password
