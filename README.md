@@ -52,7 +52,7 @@ schtasks /create /sc once /tn "auto shutdown my computer" /tr "shutdown -s" /st 
 
 At 11:00:00PM /every:M,T,W,TH,F,SA,SU shutdown -s
 
-* Schedule automatic resart *
+* Schedule automatic restart *
 
 at 11:00:00PM shutdown -r
 
